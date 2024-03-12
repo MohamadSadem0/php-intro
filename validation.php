@@ -1,9 +1,7 @@
-function validate_email($email) {
-$email_regex = '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/';
-return preg_match($email_regex, $email);
-}
+function extract_and_sort_numbers($input_string) {
+$numbers = [];
+$current_number = '';
 
-function validate_password($password) {
-$password_regex = '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/';
-return preg_match($password_regex, $password);
-}
+for ($i = 0; $i < strlen($input_string); $i++) { $char=$input_string[$i]; if (is_numeric($char)) { $current_number
+    .=$char; } else { if (!empty($current_number)) { $numbers[]=(int)$current_number; $current_number='' ; } } } if
+    (!empty($current_number)) { $numbers[]=(int)$current_number; } sort($numbers); return $numbers; }
