@@ -1,0 +1,17 @@
+function merge_sort($array) {
+$count = count($array);
+
+if ($count <= 1) { return $array; } $mid=(int)($count / 2); $left=array_slice($array, 0, $mid);
+    $right=array_slice($array, $mid); $left=merge_sort($left); $right=merge_sort($right); return merge($left, $right); }
+    function merge($left, $right) { $result=[]; while (count($left)> 0 && count($right) > 0) {
+    if ($left[0] <= $right[0]) { $result[]=array_shift($left); } else { $result[]=array_shift($right); } } while
+        (count($left)> 0) {
+        $result[] = array_shift($left);
+        }
+
+        while (count($right) > 0) {
+        $result[] = array_shift($right);
+        }
+
+        return $result;
+        }

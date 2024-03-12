@@ -1,0 +1,45 @@
+1-flip number:
+$number = 12345;
+$flipped_number = flip_number_digits($number);
+
+echo "Original Number: " . $number ;
+echo "Flipped Number: " . $flipped_number;
+
+2-merge sort:
+$array = [38, 27, 43, 3, 9, 82, 10];
+$sorted_array = merge_sort($array);
+
+echo "Original Array: " . implode(', ', $array) ;
+echo "Sorted Array: " . implode(', ', $sorted_array);
+
+3-extract-sort:
+$input_string = "hpd12aq3@8w$5";
+$filtered_numbers = extract_and_sort_numbers($input_string);
+
+echo "Input String: " . $input_string ;
+echo "Filtered and Sorted Numbers: " . implode(', ', $filtered_numbers);
+
+4- decimal to binary:
+$decimal_number = 25;
+$binary_number = decimal_to_binary($decimal_number);
+
+echo "Decimal Number: " . $decimal_number ;
+echo "Binary Number: " . $binary_number;
+
+5-validating email:
+$email = 'john.doe@example.com';
+$password = "CreativePassword123";
+
+if (validate_email($email)) {
+    echo "Email is valid.";
+} else {
+    echo "Email is not valid.";
+}
+
+echo "<br>";
+
+if (validate_password($password)) {
+    echo "Password is valid.";
+} else {
+    echo "Password is not valid.";
+}
